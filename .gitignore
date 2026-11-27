@@ -1,0 +1,9 @@
+.venv/
+data/
+.env
+__pycache__/
+.pytest_cache/
+output/
+tools/
+node_modules/
+web/dist/

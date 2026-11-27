@@ -1,0 +1,5 @@
+id: demo
+name: Demo campaign
+mode: clip_sourse
+sources:
+  - data/sources/demo

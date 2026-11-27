@@ -1,0 +1,21 @@
+id: demo
+name: Demo campaign
+language: en
+mode: clip_source
+sources:
+  - data/sources/demo
+required_hashtags: ["#clip"]
+required_mentions: ["@brand"]
+target_accounts:
+  - platform: youtube
+    account_label: main
+limits:
+  per_day: 2
+  min_gap_minutes: 120
+clip:
+  min_s: 30
+  max_s: 55
+  min_score: 70
+  max_clips_per_source: 3
+subtitle_preset: bold
+output_dir: output

@@ -1,0 +1,33 @@
+# Пример кампании. Скопируйте в campaigns/<id>.yaml или создайте через веб-интерфейс.
+id: example                      # только a-z, 0-9, _ и -
+name: Пример кампании
+language: en                     # или auto
+mode: clip_source                # clip_source: нарезка исходников заказчика
+                                 # logo_overlay: нужен блок logo ниже
+sources:                         # файлы и папки, которые передал заказчик
+  - C:\clients\example\videos
+required_hashtags: ["#clip"]     # должны быть в описании каждого клипа (проверяет quality gate)
+required_mentions: ["@example"]
+target_accounts:                 # платформа, метка аккаунта, для Android — serial устройства
+  - platform: youtube
+    account_label: main
+  # Instagram пока не публикуется: нужен Business/Creator-аккаунт и публичный URL видео.
+  # TikTok — только через Android (см. README, раздел про android_apps в config.yaml).
+  # - platform: tiktok
+  #   account_label: phone1
+  #   device_id: <device-serial>
+limits:
+  per_day: 3                     # публикаций в день на аккаунт (UTC)
+  min_gap_minutes: 90            # минимальная пауза между публикациями (плюс случайная добавка)
+  max_claude_requests_per_source: 10
+clip:
+  min_s: 30
+  max_s: 55
+  min_score: 70                  # клипы с меньшим score в очередь не попадают
+  max_clips_per_source: 3
+subtitle_preset: classic         # classic | bold | karaoke
+output_dir: output               # сюда пишутся готовые ролики: output/<id>/<дата>/<clip_id>.mp4
+# logo:                          # для logo_overlay
+#   path: C:\clients\example\logo.png
+#   position: top-right          # top-left | top-right | bottom-left | bottom-right
+#   opacity: 0.9

@@ -1,0 +1,10 @@
+id: speech_test
+name: Speech test campaign
+language: en
+mode: clip_source
+sources:
+  - data/test/speech10min.mp4
+required_hashtags: ["#clip"]
+required_mentions: []
+clip:
+  min_score: 50

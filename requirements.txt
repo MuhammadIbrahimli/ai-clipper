@@ -1,0 +1,15 @@
+pydantic>=2.7
+PyYAML>=6.0
+faster-whisper==1.1.0
+av==13.1.0
+numpy>=1.26
+opencv-python-headless==4.12.0.88  # 5.x headless has no cv2.CascadeClassifier (face tracking)
+pillow>=10.0
+google-api-python-client>=2.0
+google-auth-oauthlib>=1.0
+uiautomator2>=3.0
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+pytest>=8.0
+httpx>=0.27

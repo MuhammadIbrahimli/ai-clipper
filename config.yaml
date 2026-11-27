@@ -1,0 +1,7 @@
+# Глобальные настройки. Файл необязателен: без него действуют значения по умолчанию.
+# Меняется и из веб-интерфейса (страница «Настройки»).
+whisper_model: small            # tiny | base | small | medium | large-v3 (large-v3 на CPU очень медленный)
+prefilter_top_n: 40             # сколько окон уходит в Claude из одного исходника
+ffmpeg_path: ffmpeg             # либо полный путь, например C:\tools\ffmpeg\bin\ffmpeg.exe
+adb_path: tools\platform-tools\adb.exe   # нужен только для Android-публикации
+claude_daily_limit: 200         # запросов к Claude CLI за последние 24 часа
